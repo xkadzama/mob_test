@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #14223D;
+}
+
+.name-input {
+  width: 337px;
+  height: 44px;
+  background-color: #1C3054;
+  border-radius: 40px;
+  border: none;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  padding-left: 15px;
+  transition: color 0.3s ease, background-color 0.3s ease; /* Добавлены свойства transition */
+  
+}
+
+.name-input:focus {
+  outline: none;
+  background-color: #274670; /* Пример изменения фона при фокусе */
+}
+
+.name-input::placeholder {
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  /* color: transparent; */
+  transition: color 0.3s ease; /* Добавлено свойство transition */
+}
+
+.name-input:focus::placeholder,
+.name-input:not(:placeholder-shown)::placeholder { /* Добавлено новое правило для плавного появления текста */
+  color: #FFFFFF;
+}
+
+.btn {
+  background-image: url("images/back_arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 61px;
+  height: 46px;
+  background-color: #11112F;
+  border-radius: 40px;
+  border: none;
+  vertical-align: middle;
+  transition: background-color 0.3s ease; /* Добавлено свойство transition */
+}
+
+.btn:hover {
+  background-color: #274670; /* Пример изменения фона при наведении */
+}
+
+.btn:active {
+  background-color: #1C3054; /* Пример изменения фона при нажатии */
+}
+
+.block_name {
+  width: 431px;
+  margin: auto;
+  margin-top: 100px;
+  display: flex; /* Используем Flexbox для выравнивания элементов */
+  align-items: center; /* Выравнивание элементов по вертикали */
+}
+
+.logo {
+  background-image: url(images/logo.png);
+  background-repeat: no-repeat;
+  height: 34px;
+  width: 157px;
+  margin: auto;
+  margin-top: 60px;
+  opacity: 0; /* Начальное состояние прозрачности */
+  animation: fade-in 1s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+@media (max-width: 500px) {    
+    .block_name {
+        width: 350px;
+        /* background-color: red; */
+    }
+
+    
+    .btn {
+        margin-top: 10px;
+    }
+
+
+    .name-input {
+        width: 350px;
+    }
+}
